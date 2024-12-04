@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prévisualisation Responsive</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Prévisualisation Responsive</h1>
+    <p>Visualisez votre site dans des mockups réalistes.</p>
+  </header>
+  <main>
+    <div class="url-input">
+      <label for="site-url">Entrez l'URL du site :</label>
+      <input type="text" id="site-url" placeholder="https://exemple.com">
+      <button id="update-url">Afficher</button>
+    </div>
+    <div class="preview-container">
+      <!-- Simulation d'un écran PC -->
+      <div class="preview">
+        <h2>Écran PC</h2>
+        <div class="mockup pc">
+          <iframe id="pc-frame" src="https://example.com"></iframe>
+        </div>
+        <button class="fullscreen-btn" data-target="pc-frame">Plein écran</button>
+      </div>
+
+      <!-- Simulation d'une tablette -->
+      <div class="preview">
+        <h2>Tablette</h2>
+        <div class="mockup tablet">
+          <iframe id="tablet-frame" src="https://example.com"></iframe>
+        </div>
+      </div>
+
+      <!-- Simulation d'un téléphone -->
+      <div class="preview">
+        <h2>Téléphone</h2>
+        <div class="mockup phone">
+          <iframe id="phone-frame" src="https://example.com"></iframe>
+        </div>
+      </div>
+    </div>
+    <!-- Boîte modale pour les alertes -->
+    <div id="alert-modal" class="modal hidden">
+      <div class="modal-content">
+        <p id="modal-message">Adresse URL invalide. Veuillez entrer une URL correcte.</p>
+        <button id="close-modal">Fermer</button>
+      </div>
+    </div>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
